@@ -1,0 +1,12 @@
+@if (estado) {
+    <div class="principal">
+        <div class="contenedorModal">
+        <div class="encabezadoModal">
+            <h3>{{ titulo }}</h3>
+        </div>
+        <button class="botonCerrar" type="submit" (click)="cerrarModal()">×</button>
+        <ng-content></ng-content>
+        </div>
+    </div>
+    
+}

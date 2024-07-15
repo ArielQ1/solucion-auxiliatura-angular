@@ -1,0 +1,32 @@
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form [formGroup]="form()">
+                <h2>Formulario de Registro  </h2>
+                <div class="inputbox">
+                    <input type="text" formControlName="nombre" >
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="inputbox">
+                    <input type="date" formControlName="fechaNacimiento">
+                    <label>Fecha de Nacimiento</label>
+                </div>
+                <div class="inputbox">
+                    <input type="number" formControlName="nota">
+                    <label>Nota</label>
+                </div>
+                <button (click)="abrirModal()" [hidden]="form().invalid" >Enviar</button>
+                <pre [hidden]="form().valid" style="text-align: center; color: rgb(233, 119, 119);">Complete el Formulario</pre>
+            </form>
+        </div>
+    </div>
+</section>
+<app-modal [titulo]="tituloModal" [estado]="estadoModal">
+    <div class="contenidoModal">
+        <p>Nombre: {{ form().value.nombre }}</p>
+        <p>Fecha de Nacimiento: {{ form().value.fechaNacimiento }}</p>
+        <p>Nota: {{ form().value.nota }}</p>
+        <button (click)="guardarDatos()">Enviar Datos</button>
+    </div>
+    
+</app-modal>
