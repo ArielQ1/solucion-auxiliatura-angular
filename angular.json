@@ -88,6 +88,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "prerender": false,
+            "baseHref": "https://ArielQ1.github.io/solucion-auxiliatura-angular/",
+            "repo": "https://github.com/ArielQ1/solucion-auxiliatura-angular.git"
+          }
         }
       }
     }
