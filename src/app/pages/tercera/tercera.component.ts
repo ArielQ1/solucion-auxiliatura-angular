@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalComponent } from "../../components/modal/modal.component";
+// @ts-ignore
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-tercera',
@@ -33,7 +35,7 @@ export class TerceraComponent {
   colorTitulo: string = 'blue';
 
   abrirModal() {
-
+    confetti();
     let nota = localStorage.getItem('nota');
     if (nota) {
       this.nota = nota;
