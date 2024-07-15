@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { ModalComponent } from "../../components/modal/modal.component";
-// @ts-ignore
-import confetti from 'canvas-confetti';
 
 
 @Component({
@@ -36,7 +34,6 @@ export class SegundaComponent {
   
 
   abrirModal() {
-    confetti();
     let fechaNacimiento = localStorage.getItem('fechaNacimiento');
     if (fechaNacimiento) {
       let fecha = new Date(fechaNacimiento);
